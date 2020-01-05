@@ -20,6 +20,7 @@ function watchFiles()
     console.log("Watches files");
     gulp.watch('./sass/**/*.scss',css);
     gulp.watch('./*.php').on('change',browerSync.reload);
+    gulp.watch('./js/*.js').on('change',browerSync.reload);
 }
 
 gulp.task('default',watchFiles);
