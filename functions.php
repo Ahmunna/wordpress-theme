@@ -124,6 +124,7 @@ function clubaa_scripts() {
 	//add Fonts
 	wp_enqueue_style('clubaa-style-font','<link href="https://fonts.googleapis.com/css?family=Anaheim|Lora&display=swap" rel="stylesheet">');
 
+	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/bootstrap.min.css');
 	wp_enqueue_style( 'clubaa-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'clubaa-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
