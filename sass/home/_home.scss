@@ -1,7 +1,34 @@
-.card
+.on-hover
 {
     &:hover
     {
         border: 1px solid blue;
     }
+}
+
+.banner-image {
+    background: url(https://s1.1zoom.me/b5147/716/Underwater_diving_Water_Cave_Uniform_552377_1920x1080.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {height: 200px;}
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) { height: 250px;}
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {height: 300px;}
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {height: 400px;}
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {height: 500px;}
+}
+
+.max-width
+{
+    max-width: 50px;
 }

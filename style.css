@@ -670,12 +670,13 @@ a {
 /*--------------------------------------------------------------
 ## Global Layout
 --------------------------------------------------------------*/
-.site-content {
-  padding: 1em; }
-  @media screen and (min-width: 600px) {
-    .site-content {
-      padding: 2em; } }
-
+/*.site-content
+{
+    padding: 0 1em 0 1em;
+    @media screen and (min-width : $query__small){
+        padding: 0 2em 0 2em;
+    }
+}*/
 /*--------------------------------------------------------------
 ## Header styling
 --------------------------------------------------------------*/
@@ -841,8 +842,37 @@ button.dropdown-toggle {
 /*--------------------------------------------------------------
 ## Home styling
 --------------------------------------------------------------*/
-.card:hover {
+.on-hover:hover {
   border: 1px solid blue; }
+
+.banner-image {
+  background: url(https://s1.1zoom.me/b5147/716/Underwater_diving_Water_Cave_Uniform_552377_1920x1080.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */ }
+  @media only screen and (max-width: 600px) {
+    .banner-image {
+      height: 200px; } }
+  @media only screen and (min-width: 600px) {
+    .banner-image {
+      height: 250px; } }
+  @media only screen and (min-width: 768px) {
+    .banner-image {
+      height: 300px; } }
+  @media only screen and (min-width: 992px) {
+    .banner-image {
+      height: 400px; } }
+  @media only screen and (min-width: 1200px) {
+    .banner-image {
+      height: 500px; } }
+
+.max-width {
+  max-width: 50px; }
 
 /*--------------------------------------------------------------
 ## Posts and pages

@@ -6,6 +6,10 @@
 get_header();
 
 //Advanced Custom Fields
+//Banner image
+$titre_banniere = get_field('titre_banniere');
+$description_banniere = get_field('description_banniere');
+//Section nos activites
 $description_activite = get_field('description_activite');
 $photo_activite_1 = get_field('photo_activite_1');
 $titre_activite_1 = get_field('titre_activite_1');
@@ -17,33 +21,71 @@ $photo_activite_3 = get_field('photo_activite_3');
 $titre_activite_3 = get_field('titre_activite_3');
 $description_activite_3 = get_field('description_activite_3');
 ?>
+
+<!--Banner image and social media -->
+<div>
+    <div class=" container-fluid banner-image text-center">
+        <div class="row h-100">
+            <div class="col-sm-12 my-auto text-white">
+                <h1><?php echo $titre_banniere ; ?></h1>
+                <p><?php echo $description_banniere ; ?></p>
+            </div>
+        </div>
+    </div>
+    <!-- A rendre dynamique -->
+    <div class=" contaienr d-flex justify-content-center border bg-white p-3">
+        <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
+    </div>
+</div>
+
+
 <!--Activities Section-->
-<div class="container text-center">
-    <h2>Nos activités</h2>
+<div class="container-fluid text-center mb-5 bg-light">
+    <h2 class="p-4">Nos activités</h2>
     <p><?php echo $description_activite; ?></p>
     <div class="d-flex justify-content-center align-items-center flex-wrap">
-        <div class="card bg-white mb-3 ml-4 mr-4" style="max-width: 20rem;">
+        <div class="card bg-white m-4 on-hover" style="max-width: 20rem;">
+        <img src="<?php echo $photo_activite_1['url']?>" class="rounded mx-auto w-25 m-4 d-block"  alt="<?php echo $photo_activite_1['alt']; ?>">
             <div class="card-body ">
-                <img src="<?php echo $photo_activite_1['url']?>" class="rounded mx-auto w-25 m-4 d-block"  alt="<?php echo $photo_activite_1['alt']; ?>">
                 <h5 class="card-title m-4"><?php echo $titre_activite_1; ?></h5>
                 <p class="card-text m-3"><?php echo $description_activite_1 ; ?></p>
             </div>
         </div>
-        <div class="card bg-white mb-3 ml-4 mr-4" style="max-width: 20rem;">
+        <div class="card bg-white m-4 on-hover" style="max-width: 20rem;">
+            <img src="<?php echo $photo_activite_2['url']?>" class="rounded mx-auto w-25 m-4 d-block"  alt="<?php echo $photo_activite_2['alt']; ?>">
             <div class="card-body ">
-                <img src="<?php echo $photo_activite_2['url']?>" class="rounded mx-auto w-25 m-4 d-block"  alt="<?php echo $photo_activite_2['alt']; ?>">
                 <h5 class="card-title m-4"><?php echo $titre_activite_2; ?></h5>
                 <p class="card-text m-3"><?php echo $description_activite_2 ; ?></p>
             </div>
         </div>
-        <div class="card bg-white mb-3 ml-4 mr-4" style="max-width: 20rem;">
+        <div class="card bg-white m-4 on-hover" style="max-width: 20rem;">
+            <img src="<?php echo $photo_activite_3['url']?>" class="rounded mx-auto w-25 m-4 d-block"  alt="<?php echo $photo_activite_3['alt']; ?>">
             <div class="card-body ">
-                <img src="<?php echo $photo_activite_3['url']?>" class="rounded mx-auto w-25 m-4 d-block"  alt="<?php echo $photo_activite_3['alt']; ?>">
                 <h5 class="card-title m-4"><?php echo $titre_activite_3; ?></h5>
                 <p class="card-text m-3"><?php echo $description_activite_3 ; ?></p>
             </div>
         </div>
     </div>
 </div><!--Activities Section-->
-<?php
+<!-- A propos de nous section -->
+<!-- A rendre dynamique -->
+<div class="container mt-5">
+    <div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+        <img src="https://clubplongeaa2.000webhostapp.com/wp-content/uploads/2019/11/formation.jpg" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<?php 
 get_footer();
