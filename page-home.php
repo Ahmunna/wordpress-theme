@@ -20,6 +20,9 @@ $description_activite_2 = get_field('description_activite_2');
 $photo_activite_3 = get_field('photo_activite_3');
 $titre_activite_3 = get_field('titre_activite_3');
 $description_activite_3 = get_field('description_activite_3');
+//Section a propos de nous
+$propos_image = get_field('propos_image');
+$propos_description = get_field('propos_description');
 ?>
 
 <!--Banner image and social media -->
@@ -75,12 +78,12 @@ $description_activite_3 = get_field('description_activite_3');
     <div class="card mb-3">
     <div class="row no-gutters">
         <div class="col-md-4">
-        <img src="https://clubplongeaa2.000webhostapp.com/wp-content/uploads/2019/11/formation.jpg" class="card-img" alt="...">
+        <img src="<?php echo $propos_image['url'] ; ?>" class="card-img" alt="<?php echo $propos_image['alt'];?>">
         </div>
         <div class="col-md-8">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h3 class="card-title ">A propos de nous</h3>
+            <p class="card-text mt-5"><?php echo $propos_description ; ?></p>
         </div>
         </div>
     </div>
