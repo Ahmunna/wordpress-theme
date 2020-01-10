@@ -20,9 +20,14 @@ $description_activite_2 = get_field('description_activite_2');
 $photo_activite_3 = get_field('photo_activite_3');
 $titre_activite_3 = get_field('titre_activite_3');
 $description_activite_3 = get_field('description_activite_3');
+
 //Section a propos de nous
 $propos_image = get_field('propos_image');
 $propos_description = get_field('propos_description');
+
+//Section Notre équipe
+$loop = new WP_Query( array('post_type' => 'membres', 'orderby' =>'post_id' , 'order' => 'ASC'));
+
 ?>
 
 <!--Banner image and social media -->
@@ -45,7 +50,7 @@ $propos_description = get_field('propos_description');
 
 
 <!--Activities Section-->
-<div class="container-fluid text-center mb-5 bg-light">
+<div class="container-fluid p-5 text-center mb-5 bg-light">
     <h2 class="p-4">Nos activités</h2>
     <p><?php echo $description_activite; ?></p>
     <div class="d-flex justify-content-center align-items-center flex-wrap">
@@ -72,23 +77,39 @@ $propos_description = get_field('propos_description');
         </div>
     </div>
 </div><!--Activities Section-->
+
 <!-- A propos de nous section -->
-<!-- A rendre dynamique -->
-<div class="container mt-5">
+<div class="container  p-5 mb-5 mt-5">
+    <h1 class="text-center">A propos de nous</h1>
     <div class="card mb-3">
-    <div class="row no-gutters">
-        <div class="col-md-4">
-        <img src="<?php echo $propos_image['url'] ; ?>" class="card-img" alt="<?php echo $propos_image['alt'];?>">
-        </div>
-        <div class="col-md-8">
-        <div class="card-body">
-            <h3 class="card-title ">A propos de nous</h3>
-            <p class="card-text mt-5"><?php echo $propos_description ; ?></p>
-        </div>
+        <div class="row no-gutters">
+            <div class="col-md-4">
+            <img src="<?php echo $propos_image['url'] ; ?>" class="card-img" alt="<?php echo $propos_image['alt'];?>">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-text mt-5 text-justify"><?php echo $propos_description ; ?></p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
+</div><!-- Fin A propos de nous section -->
+
+<!-- Notre équipe section -->
+<div class="container-fluid bg-light">
+    <h1 class="text-center p-5">Notre équipe</h1>
+    <div class="container d-flex justify-content-between">
+        <?php while($loop->have_posts()) : $loop->the_post(); ?>
+        <div class="card" style="width: 18rem;">
+            <img src="<?php the_field('membre_image');?>" class="card-img-top" alt="<?php ?>">
+            <div class="card-body">
+                <p  id="notre-equipe-text" class="card-text"><?php the_title()?></p>
+                <p class="card-text font-italic text-secondary"><?php the_field('membre_poste')?></p>
+            </div>
+        </div>
+        <?php endwhile; ?>
+    </div>
+</div><!-- Fin notre equipe section-->
 
 <?php 
 get_footer();
