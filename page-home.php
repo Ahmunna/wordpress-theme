@@ -26,7 +26,8 @@ $propos_image = get_field('propos_image');
 $propos_description = get_field('propos_description');
 
 //Section Notre équipe
-$loop = new WP_Query( array('post_type' => 'membres', 'orderby' =>'post_id' , 'order' => 'ASC'));
+$membres = new WP_Query( array('post_type' => 'membres', 'orderby' =>'post_id' , 'order' => 'ASC'));
+$partenaires = new WP_Query( array('post_type' => 'partenaires', 'orderby' =>'post_id' , 'order' => 'ASC'));
 
 ?>
 
@@ -41,7 +42,7 @@ $loop = new WP_Query( array('post_type' => 'membres', 'orderby' =>'post_id' , 'o
         </div>
     </div>
     <!-- A rendre dynamique -->
-    <div class=" contaienr d-flex justify-content-center border bg-white p-3">
+    <div class=" container d-flex justify-content-around bg-white p-3">
         <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
         <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
         <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
@@ -79,7 +80,7 @@ $loop = new WP_Query( array('post_type' => 'membres', 'orderby' =>'post_id' , 'o
 </div><!--Activities Section-->
 
 <!-- A propos de nous section -->
-<div class="container  p-5 mb-5 mt-5">
+<div class="container p-5 mb-5 mt-5">
     <h1 class="text-center">A propos de nous</h1>
     <div class="card mb-3">
         <div class="row no-gutters">
@@ -96,11 +97,11 @@ $loop = new WP_Query( array('post_type' => 'membres', 'orderby' =>'post_id' , 'o
 </div><!-- Fin A propos de nous section -->
 
 <!-- Notre équipe section -->
-<div class="container-fluid bg-light">
-    <h1 class="text-center p-5">Notre équipe</h1>
-    <div class="container d-flex justify-content-between">
-        <?php while($loop->have_posts()) : $loop->the_post(); ?>
-        <div class="card" style="width: 18rem;">
+<div class="container-fluid bg-light p-5">
+    <h1 class="text-center ">Notre équipe</h1>
+    <div class="container d-flex justify-content-between flex-wrap">
+        <?php while($membres->have_posts()) : $membres->the_post(); ?>
+        <div class="card" style="width: 15rem;">
             <img src="<?php the_field('membre_image');?>" class="card-img-top" alt="<?php ?>">
             <div class="card-body">
                 <p  id="notre-equipe-text" class="card-text"><?php the_title()?></p>
@@ -111,5 +112,17 @@ $loop = new WP_Query( array('post_type' => 'membres', 'orderby' =>'post_id' , 'o
     </div>
 </div><!-- Fin notre equipe section-->
 
+<!-- Section Nos partenaires -->
+<div class="container-fluid bg-white">
+    <h1 class="text-center p-5">Nos partenaires</h1>
+    <div class="container d-flex justify-content-around flex-wrap">
+        <?php while($partenaires->have_posts()) : $partenaires->the_post(); ?>
+        <div class="text-wrap text-center" style="width : 15rem;">
+            <a href="<?php the_field('lien_partenaire');?>"><img src="<?php the_field('image_partenaire');?>" alt="logo" style="max-width : 10rem;" class="rounded-circle"  /></a>
+            <div class="text-break  mt-3 p-2 "><?php the_title();?> </div>           
+        </div>
+        <?php endwhile; ?>
+    </div> 
+</div>
 <?php 
 get_footer();
