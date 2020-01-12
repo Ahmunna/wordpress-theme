@@ -39,7 +39,7 @@
 			</div>
 		</div>
 	</div>
-	<h4 class="text-center text-white">&copy; Copyright 2020, Club Plongée de l'AA. Tous droits réservés</h4>
+	<h4 class="text-center text-white p-2" style="margin : 0;">&copy; Copyright 2020, Club Plongée de l'AA. Tous droits réservés</h4>
 	</footer>
 </div><!-- #page -->
 
