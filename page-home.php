@@ -113,8 +113,8 @@ $partenaires = new WP_Query( array('post_type' => 'partenaires', 'orderby' =>'po
 </div><!-- Fin notre equipe section-->
 
 <!-- Section Nos partenaires -->
-<div class="container-fluid bg-white">
-    <h1 class="text-center p-5">Nos partenaires</h1>
+<div class="container-fluid bg-white p-5">
+    <h1 class="text-center mb-5">Nos partenaires</h1>
     <div class="container d-flex justify-content-around flex-wrap">
         <?php while($partenaires->have_posts()) : $partenaires->the_post(); ?>
         <div class="text-wrap text-center" style="width : 15rem;">
