@@ -881,6 +881,14 @@ button.dropdown-toggle {
   height: 15em;
   width: 3em; }
 
+.notre-equipe {
+  transition: 0.5s all ease; }
+  .notre-equipe:hover {
+    transform: scale(1.1); }
+  @media screen and (max-width: 992px) {
+    .notre-equipe {
+      margin: 2rem; } }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

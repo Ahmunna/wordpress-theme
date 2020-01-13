@@ -100,9 +100,9 @@ $partenaires = new WP_Query( array('post_type' => 'partenaires', 'orderby' =>'po
 <!-- Notre équipe section -->
 <div class="container-fluid bg-light p-5">
     <h1 class="text-center ">Notre équipe</h1>
-    <div class="container d-flex justify-content-between flex-wrap">
+    <div class="container d-flex justify-content-around flex-wrap">
         <?php while($membres->have_posts()) : $membres->the_post(); ?>
-        <div class="card" style="width: 15rem;">
+        <div class="card notre-equipe card-animation" style="width: 15rem;">
             <img src="<?php the_field('membre_image');?>" class="card-img-top" alt="<?php ?>">
             <div class="card-body">
                 <p  id="notre-equipe-text" class="card-text"><?php the_title()?></p>
