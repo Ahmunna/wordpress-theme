@@ -9,6 +9,10 @@
  * @package clubAa
  */
 
+ //Section contacts
+ $adresse_postale = get_field('adresse_postale','12');
+ $telephone = get_field("telephone",'12');
+ $adresse_mail = get_field("adresse_mail",'12');
 ?>
 
 	</div><!-- #content -->
@@ -17,15 +21,15 @@
 		<div class="d-flex flex-column justify-content-center">
 			<div class="mt-2 mb-2 d-flex text- align-items-center">
 				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
-				<h6>1 route de Calais 59820 GRAVELINES</h6>
+				<h6><?php echo $adresse_postale;?></h6>
 			</div>
 			<div class="mt-2 mb-2 d-flex text- align-items-center">
 				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
-				<h6></h6>
+				<h6><?php  echo $telephone ;?></h6>
 			</div>
 			<div class="mt-2 mb-2 d-flex text- align-items-center">
 				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
-				<h6>1 route de Calais 59820 GRAVELINES</h6>
+				<h6><?php echo $adresse_mail;?></h6>
 			</div>
 		</div>
 		<div class="d-flex flex-column align-items-center pt-4">

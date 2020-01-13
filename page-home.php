@@ -29,6 +29,7 @@ $propos_description = get_field('propos_description');
 $membres = new WP_Query( array('post_type' => 'membres', 'orderby' =>'post_id' , 'order' => 'ASC'));
 $partenaires = new WP_Query( array('post_type' => 'partenaires', 'orderby' =>'post_id' , 'order' => 'ASC'));
 
+
 ?>
 
 <!--Banner image and social media -->
