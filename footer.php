@@ -36,10 +36,10 @@
 			<div>
 			Suivez-nous sur les résaux sociaux
 			</div>
-			<div> 
-				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
-				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
-				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
+			<div class="p-2"> 
+				<img src="<?php echo get_template_directory_uri();?>/img/facebook-color.png" alt="" class="max-width inline-block m-1" />
+				<img src="<?php echo get_template_directory_uri();?>/img/instagram-color.png" alt="" class="max-width inline-block m-1" />
+				<img src="<?php echo get_template_directory_uri();?>/img/youtube-color.png" alt="" class="max-width inline-block m-1" />
 			</div>
 		</div>
 	</div>

@@ -9,6 +9,12 @@ get_header();
 //Banner image
 $titre_banniere = get_field('titre_banniere');
 $description_banniere = get_field('description_banniere');
+
+//Section Reseaux sociaux
+
+$lien_facebook = get_field("lien_facebook");
+$lien_instagram = get_field('lien_instagram');
+$lien_youtube = get_field("lien_youtube");
 //Section nos activites
 $description_activite = get_field('description_activite');
 $photo_activite_1 = get_field('photo_activite_1');
@@ -44,9 +50,9 @@ $partenaires = new WP_Query( array('post_type' => 'partenaires', 'orderby' =>'po
     </div>
     <!-- A rendre dynamique -->
     <div class=" container d-flex justify-content-around bg-white p-3">
-        <a href="#"><img src="<?php echo get_template_directory_uri();?>/img/facebook.png" alt="logo"  class="max-width" /></a>
-        <a href="#"><img src="<?php echo get_template_directory_uri();?>/img/instagram.png" alt="logo"  class="max-width" /></a>
-        <a href="#"><img src="<?php echo get_template_directory_uri();?>/img/youtube.png" alt="logo"  class="max-width" /></a>
+        <a href="<?php echo $lien_facebook; ?>"><img src="<?php echo get_template_directory_uri();?>/img/facebook.png" alt="logo"  class="max-width" /></a>
+        <a href="<?php echo $lien_instagram; ?>"><img src="<?php echo get_template_directory_uri();?>/img/instagram.png" alt="logo"  class="max-width" /></a>
+        <a href="<?php echo $lien_youtube;?>"><img src="<?php echo get_template_directory_uri();?>/img/youtube.png" alt="logo"  class="max-width" /></a>
     </div>
 </div>
 

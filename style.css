@@ -354,7 +354,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: Lora, serif;
+  font-family: "Slabo 27px", serif;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5; }
@@ -370,7 +370,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: Anaheim, sans-serif; }
+  font-family: "Roboto Condensed", sans-serif; }
 
 p {
   margin-bottom: 1.5em; }
@@ -683,7 +683,7 @@ a {
 .site-header {
   position: relative;
   padding: 1em;
-  font-family: Anaheim, sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: black;
   background-color: darkgrey; }
   @media screen and (min-width: 600px) {
@@ -737,7 +737,7 @@ a {
 
 .main-navigation {
   display: block;
-  font-family: Anaheim, sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   clear: left; }
   .main-navigation ul {
