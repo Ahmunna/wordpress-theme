@@ -20,15 +20,15 @@
 	<div class="container-fluid d-flex justify-content-around text-white p-3">
 		<div class="d-flex flex-column justify-content-center">
 			<div class="mt-2 mb-2 d-flex text- align-items-center">
-				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
+				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block mr-2" />
 				<h6><?php echo $adresse_postale;?></h6>
 			</div>
 			<div class="mt-2 mb-2 d-flex text- align-items-center">
-				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
+				<img src="<?php echo get_template_directory_uri();?>/img/phone.png" alt="" class="max-width inline-block mr-2" />
 				<h6><?php  echo $telephone ;?></h6>
 			</div>
 			<div class="mt-2 mb-2 d-flex text- align-items-center">
-				<img src="wp-content\themes\clubaa\img\gps.png" alt="" class="max-width inline-block" />
+				<img src="<?php echo get_template_directory_uri(); ?>/img/email.png" alt="" class="max-width inline-block mr-2" />
 				<h6><?php echo $adresse_mail;?></h6>
 			</div>
 		</div>

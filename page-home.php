@@ -44,9 +44,9 @@ $partenaires = new WP_Query( array('post_type' => 'partenaires', 'orderby' =>'po
     </div>
     <!-- A rendre dynamique -->
     <div class=" container d-flex justify-content-around bg-white p-3">
-        <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/2x/facebook-new.png" alt="logo"  class="max-width" /></a>
+        <a href="#"><img src="<?php echo get_template_directory_uri();?>/img/facebook.png" alt="logo"  class="max-width" /></a>
+        <a href="#"><img src="<?php echo get_template_directory_uri();?>/img/instagram.png" alt="logo"  class="max-width" /></a>
+        <a href="#"><img src="<?php echo get_template_directory_uri();?>/img/youtube.png" alt="logo"  class="max-width" /></a>
     </div>
 </div>
 
@@ -101,8 +101,8 @@ $partenaires = new WP_Query( array('post_type' => 'partenaires', 'orderby' =>'po
 <div class="container-fluid bg-light p-5">
     <h1 class="text-center ">Notre équipe</h1>
     <div class="container d-flex justify-content-around flex-wrap">
-        <?php while($membres->have_posts()) : $membres->the_post(); ?>
-        <div class="card notre-equipe card-animation" style="width: 15rem;">
+        <?php $i=0; while($membres->have_posts()) : $membres->the_post(); ?>
+        <div class="card notre-equipe card-animation border border-dark" style="width: 15rem;">
             <img src="<?php the_field('membre_image');?>" class="card-img-top" alt="<?php ?>">
             <div class="card-body">
                 <p  id="notre-equipe-text" class="card-text"><?php the_title()?></p>
